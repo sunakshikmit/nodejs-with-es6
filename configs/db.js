@@ -4,7 +4,7 @@ mongoose.Promise = global.Promise;
 const connectToDb = async (config) => {
   var url = `mongodb://${config.host}/${config.dbName}`;
   try {
-    await mongoose.connect(url);
+    await mongoose.connect(url,{ useNewUrlParser: true });
     console.log("Connected to mongo!!!");
   } catch (err) {
       console.log("Could not connect to MongoDB",err)
