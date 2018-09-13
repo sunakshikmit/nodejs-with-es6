@@ -1,0 +1,6 @@
+{
+	"host": "localhost",
+    "port": 8585,
+    "dbPort": "27017",
+    "dbName": "testProjct"
+}
