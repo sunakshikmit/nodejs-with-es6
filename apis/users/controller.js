@@ -19,7 +19,6 @@ userController.register = async (req, res) => {
     const savedForm = await crudService.saveRecord(usersModel, req.body);
     responseBuilder.success(res, "created_successfully", savedForm, "en");
   } catch (err) {
-    console.log("==> err ", err);
     res.send("Got error in getAll");
   }
 };
