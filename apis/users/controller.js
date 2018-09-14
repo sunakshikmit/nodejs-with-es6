@@ -3,6 +3,7 @@ import jwt from 'jsonwebtoken';
 import crudService from "../../shared/crudService";
 import usersModel from "./model";
 const userController = {};
+const user = {};
 
 /*________________________________________________________________________
     * @Date:            Date                
@@ -23,7 +24,6 @@ userController.register = async (req, res) => {
   }
 };
 
-
 /*________________________________________________________________________
     * @Date:            Date                
     * @Method :         register                
@@ -36,8 +36,6 @@ userController.register = async (req, res) => {
 userController.login = async (req, res) => {
   let query = {email:req.body.email}
   const _userDetail = await crudService.getOneRecord(usersModel,query);
-
-  console.log('===> user ',_userDetail)
 };
 
 export default userController;
